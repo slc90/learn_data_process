@@ -1,10 +1,21 @@
 [project]
 name = "backend"
 version = "0.1.0"
-description = "Add your description here"
+description = "Learn Data Process"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
-    "numpy>=2.2.1",
+    "fastapi[standard]>=0.115.6",
     "pydantic>=2.10.5",
+]
+
+
+[[tool.uv.index]]
+name = "default-source"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.4",
 ]
